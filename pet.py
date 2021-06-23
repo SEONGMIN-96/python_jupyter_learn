@@ -25,73 +25,73 @@ if __name__ == '__main__':
                      '20. snake 를 python 으로 값을 변경\n')
 
 
-data = {'animal': ['cat', 'cat', 'snake', 'dog', 'dog', 'cat', 'snake', 'cat', 'dog', 'dog'],
-        'age': [2.5, 3, 0.5, np.nan, 5, 2, 4.5, np.nan, 7, 3],
-        'visits': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1],
-        'priority': ['yes', 'yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'no']}
-labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
-df = []
+    data = {'animal': ['cat', 'cat', 'snake', 'dog', 'dog', 'cat', 'snake', 'cat', 'dog', 'dog'],
+            'age': [2.5, 3, 0.5, np.nan, 5, 2, 4.5, np.nan, 7, 3],
+            'visits': [1, 3, 2, 3, 2, 3, 1, 1, 2, 1],
+            'priority': ['yes', 'yes', 'no', 'yes', 'no', 'no', 'no', 'yes', 'no', 'no']}
+    labels = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j']
+    df = []
 
-def quiz_2():
-    pd.__version__
+    def quiz_2():
+        pd.__version__
 
-def quiz_3():
-    pd.show_versions()
+    def quiz_3():
+        pd.show_versions()
 
-def quiz_4():
-    df = pd.DataFrame(data, index=labels)
+    def quiz_4():
+        df = pd.DataFrame(data, index=labels)
 
-def quiz_5():
-    df.describe()
+    def quiz_5():
+        df.describe()
 
-def quiz_6():
-    df.iloc[:3]
+    def quiz_6():
+        df.iloc[:3]
 
-def quiz_7():
-    df.loc[:,['animal','age']]
+    def quiz_7():
+        df.loc[:,['animal','age']]
 
-def quiz_8():
-    df.loc[df.index[[3,4,8]], ['animal','age']]
+    def quiz_8():
+        df.loc[df.index[[3,4,8]], ['animal','age']]
 
-def quiz_9():
-    df[df['visits']>2]
+    def quiz_9():
+        df[df['visits']>2]
 
-def quiz_10():
-    df[df['age'].isnull()]
+    def quiz_10():
+        df[df['age'].isnull()]
 
-def quiz_11():
-    df[(df['age'] <3) & (df['animal'] =='cat')]
+    def quiz_11():
+        df[(df['age'] <3) & (df['animal'] =='cat')]
 
-def quiz_12():
-    df[df['age'].between(2,4)]
+    def quiz_12():
+        df[df['age'].between(2,4)]
 
-def quiz_13():
-    df.loc['f','age'] = 1.5
+    def quiz_13():
+        df.loc['f','age'] = 1.5
 
-def quiz_14():
-    df['visits'].sum()
+    def quiz_14():
+        df['visits'].sum()
 
-def quiz_15():
-    df.groupby('animal')['age'].mean()
+    def quiz_15():
+        df.groupby('animal')['age'].mean()
 
-def quiz_16():
-    df.loc['k'] = ['dog',5.5,2,'no']
+    def quiz_16():
+        df.loc['k'] = ['dog',5.5,2,'no']
 
-def quiz_16_1():
-    df.drop('k', inplace=True)
-    # del df['k']
+    def quiz_16_1():
+        df.drop('k', inplace=True)
+        # del df['k']
 
-def quiz_17():
-    df['animal'].value_counts()
+    def quiz_17():
+        df['animal'].value_counts()
 
-def quiz_18():
-    df.sort_values(by=['age','visits'], ascending=[False, True])
+    def quiz_18():
+        df.sort_values(by=['age','visits'], ascending=[False, True])
 
-def quiz_19():
-    df['priority'] = df['priority'].map({'yes':True, 'no':False})
-    df
+    def quiz_19():
+        df['priority'] = df['priority'].map({'yes':True, 'no':False})
+        df
 
-def quiz_20():
-    df['animal'] = df['animal'].replace('snake','python')
-    df
+    def quiz_20():
+        df['animal'] = df['animal'].replace('snake','python')
+        df
 
